@@ -57,10 +57,7 @@ info:
   version: 0.0.0
 paths:
   '/test/{random}':
-    post:
-      requestBody:
-        content:
-          application/json: {}
+    get:
       responses: {}
       parameters:
         - name: random
@@ -84,6 +81,8 @@ info:
   title: Test
   version: 0.0.0
 paths:
-  '/test/{random}': {}
+  '/test/{random}':
+    post:
+      summary: ''
 "
 `;
