@@ -2,7 +2,7 @@
 
 exports[`Fastify UI Routes does not install middleware without config 1`] = `"Your UI should at least have a { config } signature"`;
 
-exports[`Fastify UI Routes does not install middleware without config.info 1`] = `"Your UI should at least have a { config: { info: { name, version } } } signature"`;
+exports[`Fastify UI Routes does not install middleware without config.info 1`] = `"Your UI should at least have a { config: { info: { title, version } } } signature"`;
 
 exports[`Fastify UI Routes does not install middleware without config.servers 1`] = `"Your UI should at least have a { config: { servers: [{ url }] } } signature"`;
 
@@ -55,7 +55,7 @@ exports[`Fastify UI Routes serves JSON 1`] = `
 Object {
   "info": Object {
     "description": "Performs some unit tests.",
-    "name": "Test API",
+    "title": "Test API",
     "version": "0.0.0",
   },
   "servers": Array [
@@ -68,7 +68,7 @@ Object {
 
 exports[`Fastify UI Routes serves YAML 1`] = `
 "info:
-  name: Test API
+  title: Test API
   description: Performs some unit tests.
   version: 0.0.0
 servers:
