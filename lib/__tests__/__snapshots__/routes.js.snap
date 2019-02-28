@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Fastify UI Routes does not install middleware without config 1`] = `"Your UI should at least have a { config } signature"`;
+
+exports[`Fastify UI Routes does not install middleware without config.info 1`] = `"Your UI should at least have a { config: { info: { name, version } } } signature"`;
+
+exports[`Fastify UI Routes does not install middleware without config.servers 1`] = `"Your UI should at least have a { config: { servers: [{ url }] } } signature"`;
+
+exports[`Fastify UI Routes installs middleware 1`] = `
+Object {
+  "registerCalls": Array [
+    Array [
+      [MockFunction],
+      Object {
+        "root": "./node_modules/openapi-ui/dist",
+      },
+    ],
+  ],
+  "routeCalls": Array [
+    Array [
+      Object {
+        "handler": [Function],
+        "method": "GET",
+        "schema": Object {
+          "hide": true,
+        },
+        "url": "/",
+      },
+    ],
+    Array [
+      Object {
+        "handler": [Function],
+        "method": "GET",
+        "schema": Object {
+          "hide": true,
+        },
+        "url": "/json",
+      },
+    ],
+    Array [
+      Object {
+        "handler": [Function],
+        "method": "GET",
+        "schema": Object {
+          "hide": true,
+        },
+        "url": "/yaml",
+      },
+    ],
+  ],
+}
+`;
+
+exports[`Fastify UI Routes serves JSON 1`] = `
+Object {
+  "info": Object {
+    "description": "Performs some unit tests.",
+    "name": "Test API",
+    "version": "0.0.0",
+  },
+  "servers": Array [
+    Object {
+      "url": "http://localhost:3000",
+    },
+  ],
+}
+`;
+
+exports[`Fastify UI Routes serves YAML 1`] = `
+"info:
+  name: Test API
+  description: Performs some unit tests.
+  version: 0.0.0
+servers:
+  - url: 'http://localhost:3000'
+"
+`;
+
+exports[`Fastify UI Routes serves index 1`] = `"<body>Dummy index</body>"`;

@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Fastify UI Open API 3 generator advanced route 1`] = `
+"openapi: 3.0.0
+info:
+  title: Test
+  version: 0.0.0
+paths:
+  '/test/{random}':
+    post:
+      operationId: testMethod
+      summary: Tests the basic features
+      security:
+        - bearerAuth:
+            - 'tests:run'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                profession:
+                  type: string
+      responses:
+        '200':
+          description: The test ran successfully.
+          content:
+            application/json:
+              schema:
+                description: The test ran successfully.
+                type: object
+                properties:
+                  success:
+                    type: boolean
+        '500':
+          description: An error occurred.
+      parameters:
+        - name: random
+          schema: {}
+          required: true
+          in: path
+"
+`;
+
+exports[`Fastify UI Open API 3 generator empty config 1`] = `
+"openapi: 3.0.0
+paths: {}
+"
+`;
+
+exports[`Fastify UI Open API 3 generator simple route using the shorthand syntax 1`] = `
+"openapi: 3.0.0
+info:
+  title: Test
+  version: 0.0.0
+paths:
+  '/test/{random}':
+    post:
+      requestBody:
+        content:
+          application/json: {}
+      responses: {}
+      parameters:
+        - name: random
+          schema: {}
+          in: path
+"
+`;
+
+exports[`Fastify UI Open API 3 generator simple route with a schema just to hide it 1`] = `
+"openapi: 3.0.0
+info:
+  title: Test
+  version: 0.0.0
+paths: {}
+"
+`;
+
+exports[`Fastify UI Open API 3 generator simple route without schema 1`] = `
+"openapi: 3.0.0
+info:
+  title: Test
+  version: 0.0.0
+paths:
+  '/test/{random}': {}
+"
+`;
