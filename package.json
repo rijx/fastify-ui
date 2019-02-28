@@ -1,7 +1,7 @@
 {
   "name": "fastify-ui",
   "description": "Makes adding an API UI to your Fastify project a breeze.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "lib",
   "scripts": {
     "check-deps": "cat package.json | node bin/check-deps",
