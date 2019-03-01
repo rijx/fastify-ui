@@ -38,7 +38,8 @@ paths:
           description: An error occurred.
       parameters:
         - name: random
-          schema: {}
+          schema:
+            type: string
           required: true
           in: path
 "
@@ -61,7 +62,8 @@ paths:
       responses: {}
       parameters:
         - name: random
-          schema: {}
+          schema:
+            type: string
           in: path
 "
 `;
